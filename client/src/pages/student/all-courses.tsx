@@ -34,11 +34,7 @@ function AllCourses() {
                         <h2 className="text-xl font-semibold text-blue-600">{course.title}</h2>
                         <p className="text-gray-700 mt-2">{course.description}</p>
                         <p className="text-sm text-gray-500 mt-2">Instructor: {course.instructor}</p>
-                        <button
-                            className="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
-                        >
-                            Enroll
-                        </button>
+
                     </div>
                 ))}
             </div>

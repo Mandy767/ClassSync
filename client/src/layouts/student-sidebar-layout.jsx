@@ -9,16 +9,16 @@ const StudentSidebarLayout = () => {
       icon: <Book className="h-5 w-5" />,
       label: "All Courses",
     },
-    {
-      path: "/student/my-enrolled-courses",
-      icon: <PlusCircle className="h-5 w-5" />,
-      label: "Enrolled Courses",
-    },
-    {
-      path: "/student/enroll-request-status",
-      icon: <FileText className="h-5 w-5" />,
-      label: "Enroll Requests",
-    },
+    // {
+    //   path: "/student/my-enrolled-courses",
+    //   icon: <PlusCircle className="h-5 w-5" />,
+    //   label: "Enrolled Courses",
+    // },
+    // {
+    //   path: "/student/enroll-request-status",
+    //   icon: <FileText className="h-5 w-5" />,
+    //   label: "Enroll Requests",
+    // },
   ];
 
   return (
