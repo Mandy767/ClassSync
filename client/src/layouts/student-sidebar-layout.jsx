@@ -1,4 +1,4 @@
-import { Book, PlusCircle, UserPlus, Layout } from "lucide-react";
+import { Book, PlusCircle, FileText } from "lucide-react";
 import { useLocation, Outlet } from "react-router-dom";
 
 const StudentSidebarLayout = () => {
@@ -16,8 +16,8 @@ const StudentSidebarLayout = () => {
     },
     {
       path: "/student/enroll-request-status",
-      icon: <Book className="h-5 w-5" />,
-      label: "Enroll requests",
+      icon: <FileText className="h-5 w-5" />,
+      label: "Enroll Requests",
     },
   ];
 
