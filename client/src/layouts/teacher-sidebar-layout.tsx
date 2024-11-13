@@ -5,14 +5,9 @@ import { useLocation, Outlet } from 'react-router-dom';
 const TeacherSidebarLayout = () => {
     const location = useLocation();
     const menuItems = [
-        { path: '/teacher/dashboard', icon: <Layout className="h-5 w-5" />, label: 'Dashboard' },
-        { path: '/teacher/create-course', icon: <PlusCircle className="h-5 w-5" />, label: 'Create Course' },
+
         { path: '/teacher/my-courses', icon: <Book className="h-5 w-5" />, label: 'My Courses' },
-        { path: '/teacher/add-assignments', icon: <FileText className="h-5 w-5" />, label: 'Add Assignments' },
-        { path: '/teacher/all-assignments', icon: <FileCheck className="h-5 w-5" />, label: 'All Assignments' },
-        { path: '/teacher/add-announcements', icon: <Book className="h-5 w-5" />, label: 'Add Announcements' },
-        { path: '/teacher/all-announcements', icon: <Book className="h-5 w-5" />, label: 'All Announcements' },
-        { path: '/teacher/enrollment-requests', icon: <UserPlus className="h-5 w-5" />, label: 'Enrollment Requests' },
+
     ];
     return (
         <div className="flex h-screen bg-gray-100">

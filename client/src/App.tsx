@@ -17,6 +17,7 @@ import MyEnrolledCourses from "./pages/student/my-enrolled-courses";
 import EnrollRequests from "./pages/student/enroll-request-status";
 import AddAnnouncements from "./pages/teacher/add-announcements";
 import AllAnnouncements from "./pages/teacher/all-announcements";
+import CourseInfo from "./pages/teacher/course-info";
 
 
 function App() {
@@ -41,14 +42,15 @@ function App() {
           </Route>
 
           <Route path="/teacher" element={<TeacherSidebarLayout />}>
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="create-course" element={<CreateCourse />} />
+            <Route path="my-courses/create" element={<CreateCourse />} />
+            <Route path="my-courses/courseid:" element={<CourseInfo />} />
+
             <Route path="my-courses" element={<MyCourses />} />
-            <Route path="add-assignments" element={<AddAssignments />} />
-            <Route path="add-announcements" element={<AddAnnouncements />} />
-            <Route path="all-announcements" element={<AllAnnouncements />} />
-            <Route path="all-assignments" element={<AllAssignments />} />
-            <Route path="enrollment-requests" element={<EnrollmentRequests />} />
+            <Route path="my-courses/courseid:/add-assignments" element={<AddAssignments />} />
+            <Route path="my-courses/courseid:/add-announcements" element={<AddAnnouncements />} />
+            {/* <Route path="all-announcements" element={<AllAnnouncements />} />
+            <Route path="all-assignments" element={<AllAssignments />} />  */}
+            {/* <Route path="enrollment-requests" element={<EnrollmentRequests />} />  */}
           </Route>
         </Routes>
       </Router>

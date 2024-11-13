@@ -93,6 +93,7 @@ function AddAnnouncements() {
                     >
                         Create Announcement
                     </button>
+
                 </form>
             </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function MyCourses() {
     // Dummy courses data
@@ -21,6 +22,8 @@ function MyCourses() {
         },
     ]);
 
+    const navigate = useNavigate()
+
     // Handle course deletion
     const handleDelete = (courseCode) => {
         setCourses((prevCourses) => prevCourses.filter(course => course.courseCode !== courseCode));
@@ -28,11 +31,19 @@ function MyCourses() {
 
     return (
         <div className="max-w-2xl mx-auto p-6">
+
             <h2 className="text-2xl font-bold mb-6">My Courses</h2>
+            <div className='p-5'>
+                <button onClick={() => {
+                    navigate("/teacher/my-courses/create")
+                }}>Create course </button>
+            </div>
             {courses.length === 0 ? (
                 <p>No courses available.</p>
             ) : (
-                <ul>
+                <ul onClick={() => {
+                    navigate("/teacher/my-courses/courseid:")
+                }}>
                     {courses.map((course) => (
                         <li key={course.courseCode} className="border p-4 mb-2 rounded-md shadow">
                             <h3 className="font-semibold">{course.courseName}</h3>

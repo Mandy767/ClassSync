@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function CreateCourse() {
+
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         courseName: '',
         description: '',
@@ -149,6 +152,14 @@ function CreateCourse() {
                         className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors mt-6"
                     >
                         Create Course
+                    </button>
+                    <button
+                        onClick={() => {
+                            navigate("/teacher/my-courses")
+                        }}
+                        className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors mt-6"
+                    >
+                        Back
                     </button>
                 </form>
             </div>
